@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Tables</title>
+    <style>
+        .vertical-text {
+            writing-mode: vertical-lr; /* 上から下への縦書き */
+            text-align: center; /* テキストを中央揃え */
+            white-space: nowrap; /* テキストを折り返さない */
+        }
+        table {
+            width: 460px; /* 幅を設定 */
+            height: 150px; /* 高さを設定 */
+        }
+		/* テーブル内のテキストサイズを変更 */
+        table td,
+        table th {
+            font-size: 16px; /* テキストサイズを変更 */
+        }
+        /* 上下の表でテキストサイズを異なる値に変更 */
+        .first-table td,
+        .first-table th {
+            font-size: 18px; /* 上の表のテキストサイズを変更 */
+        }
+		.second-table td,
+        .second-table th {
+            font-size: 14px; /* 下の表のテキストサイズを変更 */
+        }
+        .mercari {
+            font-size: 39px; /* フォントサイズを設定 */
+            color: #FF32AB; /* テキストカラーを設定 */
+            font-weight: bold; /* フォントの太さを設定 */
+            display: inline-block; /* インラインブロック要素として扱う */
+            width: 100%; /* 表の横幅と同じ幅に設定 */
+        }
+        .print-button {
+            display: block;
+            margin-top: 26px;
+            text-align: center;
+            padding: 10px 149px; /* パディングを追加 */
+            font-size: 29px; /* フォントサイズを変更 */
+            background-color: #007bff; /* 背景色を変更 */
+            color: #fff; /* テキストカラーを変更 */
+            border: none; /* ボーダーを削除 */
+            border-radius: 5px; /* ボーダーの角を丸くする */
+            cursor: pointer; /* カーソルをポインターに変更 */
+            transition: background-color 0.3s; /* ホバー時のアニメーション */
+        }
+        .print-button:hover {
+            background-color: #0056b3; /* ホバー時の背景色を変更 */
+        }
+        @media print {
+            .print-button {
+                display: none; /* 印刷時に印刷ボタンを非表示にする */
+            }
+        }
+    </style>
+</head>
+<body style="margin-top: 112px;"></body>
+	<table border="1" class="first-table">
+		<tr class="address">
+            <th rowspan="3" class="vertical-text" style="width: 24px;">宛先</th>
+            <th style="width: 14px;">〒</th>
+            <th style="width: 20px;">2</th>
+            <th style="width: 20px;">2</th>
+            <th style="width: 20px;">6</th>
+            <th style="width: 20px;">0</th>
+            <th style="width: 20px;">0</th>
+            <th style="width: 20px;">5</th>
+            <th style="width: 20px;">1</th>      
+        </tr>
+        <tr>
+            <td colspan="8">神奈川県横浜市緑区</td>
+        </tr>
+        <tr>
+            <td colspan="7">鴨居町２４９０</td>
+            <td>様</td>
+        </tr>
+    </table>
+
+	<table border="1" class="second-table">
+        <tr>
+            <th rowspan="3" class="vertical-text" style="width: 24px;">差出人</th>
+            <th style="width: 14px;">〒</th>
+            <th style="width: 20px;">1</th>
+            <th style="width: 20px;">9</th>
+            <th style="width: 20px;">4</th>
+            <th style="width: 20px;">0</th>
+            <th style="width: 20px;">2</th>
+            <th style="width: 20px;">0</th>
+            <th style="width: 20px;">3</th>      
+        </tr>
+        <tr>
+            <td colspan="8">東京都町田市図師町601-9</td>
+        </tr>
+        <tr>
+            <td colspan="8">松本  陽平</td>
+        </tr>
+    </table>
+	<p class="mercari" style="margin-left: 100px;">
+		<img src="file:///Users/matsumotoyouhei/Desktop/ダウンロード.png" alt="Mercariロゴ" style="
+		width: 50px;
+		height: 50px;">
+		mercari
+	</p>
+    <button class="print-button" onclick="window.print()">印刷</button>
+</body>
+</html>
